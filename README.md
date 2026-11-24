@@ -1,0 +1,4 @@
+# Vestjylland Forsikring application
+Independent static site. Open index.html or serve with `python -m http.server 8000`. No build step. Upload the folder to a separate hosting project, not the Belman repository.
+
+The published Belman portrait and CV are linked directly because network access from the build environment could not retrieve their binaries. For self-contained hosting, download those files from their current URLs, put them in assets/, and replace the corresponding URLs in index.html. The CV is opened in a browser PDF viewer from which it can be downloaded. The project illustrations are intentionally schematic, not actual screenshots. Replace with original portfolio screenshots if desired. The original Belman source files were not accessible, so this is a new static implementation based on its published structure. The noindex directive is not access control. No deployment has been performed.
