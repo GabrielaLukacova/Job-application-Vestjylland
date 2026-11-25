@@ -86,3 +86,18 @@ document.addEventListener("DOMContentLoaded", () => {
         ).forEach(section => sectionObserver.observe(section));
     }
 });
+
+/* Remove tracking parameters from the URL */
+const cleanUrl = new URL(window.location.href);
+
+for (const key of [...cleanUrl.searchParams.keys()]) {
+    if (key.startsWith("utm_")) {
+        cleanUrl.searchParams.delete(key);
+    }
+}
+
+if (cleanUrl.href !== window.location.href) {
+    window.history.replaceState(
+        window.history.state, "", cleanUrl.href
+    );
+}
