@@ -846,3 +846,13 @@ footer {
         transform: scale(1.20);
     }
 }
+
+.portrait {
+    transform: scale(1.15);
+}
+
+@media (max-width: 760px) {
+    .portrait {
+        transform: scale(1.12);
+    }
+}
