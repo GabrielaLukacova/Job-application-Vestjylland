@@ -824,3 +824,25 @@ footer {
         padding-block: 25px;
     }
 }
+
+/* Improved portrait framing */
+.hero-photo {
+    position: relative;
+    overflow: hidden;
+    background: #d6cec1;
+}
+
+.portrait {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    object-fit: contain;
+    transform: scale(1.35);
+    transform-origin: center bottom;
+}
+
+@media (max-width: 760px) {
+    .portrait {
+        aspect-ratio: 4 / 4.1;
+        transform: scale(1.30);
+    }
+}
