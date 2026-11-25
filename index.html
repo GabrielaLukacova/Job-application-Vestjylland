@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#17384b">
-    <meta name="description" content="A personal application from Gabriela Lukacova for the marketing position at Vestjylland Forsikring.">
+    <meta name="theme-color" content="#173b63">
+    <meta name="description" content="Gabriela Lukacova's personal application for Vestjylland Forsikring.">
     <title>Gabriela Lukacova | Vestjylland Forsikring</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -14,23 +14,32 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="header">
-    <div class="nav-container">
+    <div class="navigation">
         <a class="brand" href="#home">
             Gabriela Lukacova
-            <span>Personal application</span>
+            <small>Personal application</small>
         </a>
 
-        <nav aria-label="Main navigation">
+        <nav id="navigation" aria-label="Main navigation">
             <a href="#motivation">My motivation</a>
             <a href="#about">About me</a>
-            <a href="#contribution">My contribution</a>
+            <a href="#contribution">What I bring</a>
         </nav>
 
-        <a class="button button-small"
-           href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf"
-           target="_blank" rel="noopener">
-            My CV <span aria-hidden="true">↗</span>
-        </a>
+        <div class="nav-actions">
+            <a href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf" class="button small"
+               target="_blank" rel="noopener">
+                My CV ↗
+            </a>
+            <button class="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </div>
 </header>
 
@@ -39,328 +48,258 @@
     <section class="hero" id="home">
         <div class="container hero-grid">
 
-            <div class="hero-content">
+            <div class="hero-copy">
                 <p class="eyebrow">
-                    A PERSONAL APPLICATION FOR VESTJYLLAND FORSIKRING
+                    Marketingmedarbejder · Maternity cover
                 </p>
 
                 <h1>
-                    Good marketing<br>
-                    starts with <span>people.</span>
+                    I would love to be<br>
+                    part of your team.
                 </h1>
 
                 <p class="greeting">
                     Dear Casper and the marketing team,
                 </p>
 
-                <p class="hero-description">
-                    I'm Gabriela, a creative and curious person
-                    with a background in design, marketing and
-                    digital development. I would love to bring
-                    my ideas, enthusiasm and willingness to learn
-                    to your team in Videbæk.
+                <p class="intro">
+                    I'm Gabriela! With a background in design,
+                    marketing and digital development, I would
+                    love to bring my creativity, curiosity and
+                    enthusiasm to Vestjylland Forsikring.
                 </p>
 
                 <div class="actions">
                     <a href="#motivation" class="button">
-                        Get to know me <span aria-hidden="true">↓</span>
+                        Get to know me ↓
                     </a>
-                    <a href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf"
-                       class="text-link" target="_blank" rel="noopener">
-                        Explore my CV ↗
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="portrait-frame">
-                    <img src="https://gabrielalukacova.github.io/Job-application-Belman/assets/gabriela.png" alt="Gabriela Lukacova" class="portrait">
-                    <div class="portrait-note">
-                        <span class="small-dot"></span>
-                        Creative at heart.<br>
-                        Curious by nature.
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="container role-line">
-            <span>Marketingmedarbejder</span>
-            <span>One year maternity cover</span>
-            <span>Vestjylland Forsikring · Videbæk</span>
-        </div>
-    </section>
-
-    <section class="section motivation" id="motivation">
-        <div class="container split">
-
-            <div class="section-heading">
-                <p class="eyebrow">01 / MY MOTIVATION</p>
-                <h2>Why I would love to be part of your team.</h2>
-            </div>
-
-            <div class="prose">
-                <p>
-                    What caught my attention about Vestjylland
-                    Forsikring was not just the position itself.
-                    It was the way you describe your workplace:
-                    colleagues helping each other, sharing ideas
-                    and taking responsibility together.
-                </p>
-
-                <p>
-                    I really appreciate that your company is
-                    owned by its customers and has grown from
-                    a local community. It gives your marketing
-                    a purpose that goes beyond simply promoting
-                    insurance. It is also about building trust
-                    and helping people feel secure.
-                </p>
-
-                <p>
-                    That is the kind of communication I would
-                    love to contribute to. Clear, thoughtful,
-                    approachable and genuinely useful to people.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section about" id="about">
-        <div class="container split about-grid">
-
-            <div class="about-statement">
-                <p class="eyebrow">02 / A LITTLE ABOUT ME</p>
-
-                <h2>
-                    I love understanding<br>
-                    how people think.
-                </h2>
-
-                <p class="statement-caption">
-                    And finding creative ways to make
-                    everyday experiences a little better.
-                </p>
-
-                <div class="education">
-                    <span>Multimedia Design</span>
-                    <span>Business &amp; Marketing</span>
-                    <span>Web Development</span>
-                </div>
-            </div>
-
-            <div class="prose">
-                <p>
-                    One of my favourite parts of design is
-                    discovering why something feels easy and
-                    natural to one person but confusing to another.
-                    I enjoy thinking about how we can communicate
-                    information more clearly, whether through a
-                    website, a presentation or a simple visual.
-                </p>
-
-                <p>
-                    I also enjoy the process of creating something
-                    together. I love exchanging ideas, hearing
-                    different perspectives and learning from
-                    people who have experience that I don't
-                    have yet.
-                </p>
-
-                <p>
-                    My education has given me a combination of
-                    creative, technical and business knowledge.
-                    I'm particularly interested in visual
-                    communication, customer experiences and
-                    how AI can support creative work.
-                </p>
-
-                <p>
-                    Originally from Slovakia, I'm building my
-                    future in Denmark. I speak English fluently
-                    and am actively learning Danish. Getting
-                    to know the language, the culture and the
-                    people here is something that genuinely
-                    matters to me.
-                </p>
-
-                <p>
-                    I would love to find a workplace where I
-                    can grow professionally, be useful to my
-                    colleagues and enjoy coming to work every day.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section contribution" id="contribution">
-        <div class="container">
-
-            <div class="center-heading">
-                <p class="eyebrow">03 / MY CONTRIBUTION</p>
-                <h2>What I would love to bring.</h2>
-                <p>
-                    A combination of creativity, practical digital
-                    skills and genuine enthusiasm for working together.
-                </p>
-            </div>
-
-            <div class="contribution-grid">
-
-                <article class="contribution-item">
-                    <div class="item-number">01</div>
-                    <h3>Creativity with a purpose</h3>
-                    <p>
-                        I enjoy turning ideas into clear and
-                        visually engaging communication. I would
-                        love to help create campaign materials,
-                        social media content and presentations
-                        that reflect your brand and connect
-                        with your customers.
-                    </p>
-                </article>
-
-                <article class="contribution-item">
-                    <div class="item-number">02</div>
-                    <h3>A digital perspective</h3>
-                    <p>
-                        My background in web development helps
-                        me understand digital platforms beyond
-                        their visual appearance. I would enjoy
-                        supporting website updates, organizing
-                        content and exploring practical ways
-                        technology can help your team.
-                    </p>
-                </article>
-
-                <article class="contribution-item">
-                    <div class="item-number">03</div>
-                    <h3>A helpful colleague</h3>
-                    <p>
-                        I like being part of a team where people
-                        can rely on each other. Whether preparing
-                        materials, supporting customer events or
-                        helping with everyday marketing tasks,
-                        I would be happy to contribute wherever
-                        an extra pair of hands is needed.
-                    </p>
-                </article>
-
-                <article class="contribution-item">
-                    <div class="item-number">04</div>
-                    <h3>Curiosity and initiative</h3>
-                    <p>
-                        I enjoy learning new things and understanding
-                        how different parts of a business work
-                        together. I would welcome the opportunity
-                        to develop my skills in event coordination,
-                        campaign planning and collecting information
-                        for marketing reports.
-                    </p>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section values">
-        <div class="container">
-
-            <p class="eyebrow">THE WAY I WOULD LIKE TO WORK</p>
-            <h2>Three values that resonate with me.</h2>
-
-            <div class="values-grid">
-                <div>
-                    <span class="value-danish">Troværdig</span>
-                    <h3>Trustworthy.</h3>
-                    <p>
-                        Communicate openly, keep promises
-                        and treat people with respect.
-                    </p>
-                </div>
-
-                <div>
-                    <span class="value-danish">Ihærdig</span>
-                    <h3>Dedicated.</h3>
-                    <p>
-                        Keep learning, put care into the work
-                        and see tasks through.
-                    </p>
-                </div>
-
-                <div>
-                    <span class="value-danish">Proaktiv</span>
-                    <h3>Proactive.</h3>
-                    <p>
-                        Ask questions, share ideas and offer
-                        help when it is needed.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section portfolio">
-        <div class="container split">
-
-            <div>
-                <p class="eyebrow">04 / MY BACKGROUND</p>
-                <h2>A little more of what I do.</h2>
-            </div>
-
-            <div class="prose">
-                <p>
-                    My portfolio brings together my interest in
-                    visual design, user experience and digital
-                    communication. It gives a closer look at
-                    how I approach ideas and turn them into
-                    practical experiences.
-                </p>
-
-                <div class="actions">
-                    <a class="button"
-                       href="https://gabrielalukacova.github.io/designer-portfolio/"
-                       target="_blank" rel="noopener">
-                        Visit my portfolio ↗
-                    </a>
-
-                    <a class="text-link"
-                       href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf"
+                    <a href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf" class="text-link"
                        target="_blank" rel="noopener">
                         View my CV ↗
                     </a>
                 </div>
             </div>
 
+            <div class="hero-photo">
+                <img src="https://gabrielalukacova.github.io/Job-application-Belman/assets/gabriela.png" alt="Gabriela Lukacova" class="portrait" fetchpriority="high">
+            </div>
+
         </div>
     </section>
 
-    <section class="section closing" id="contact">
-        <div class="container closing-content">
+    <section class="education-strip" aria-label="Educational background">
+        <div class="container education-grid">
+            <div>
+                <span>Creative background</span>
+                <strong>Multimedia Design</strong>
+            </div>
+            <div>
+                <span>Business understanding</span>
+                <strong>Business &amp; Marketing</strong>
+            </div>
+            <div>
+                <span>Digital knowledge</span>
+                <strong>Web Development</strong>
+            </div>
+        </div>
+    </section>
 
-            <p class="eyebrow">LET'S GET TO KNOW EACH OTHER</p>
+    <section class="section motivation" id="motivation">
+        <div class="container narrow reveal">
 
-            <h2>I would love to meet you.</h2>
+            <p class="eyebrow">My motivation</p>
+            <h2>Good marketing starts with understanding people.</h2>
 
             <p>
-                Thank you, Casper and the team, for taking
-                the time to get to know me.
+                What I particularly like about Vestjylland
+                Forsikring is your focus on people, both your
+                customers and your colleagues. Your commitment
+                to personal relationships and local communities
+                makes your marketing feel meaningful.
             </p>
 
             <p>
-                I would be genuinely happy to become part of
-                your everyday work, learn from your experience
-                and bring my own creativity and enthusiasm
-                to Vestjylland Forsikring.
+                I was also drawn to the way you describe your
+                workplace, where colleagues support each other
+                and new employees are given room to learn.
+                That is exactly the kind of environment where
+                I would love to contribute and grow.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+
+        <div class="about-grid">
+
+            <div class="about-highlight reveal">
+                <div>
+                    <p class="eyebrow">A little about me</p>
+                    <h2>
+                        Curious about people.<br>
+                        Passionate about creating.
+                    </h2>
+                    <p>
+                        I love finding small ways to make
+                        everyday experiences clearer,
+                        easier and more enjoyable.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-copy reveal">
+
+                <h3>What makes me, me?</h3>
+
+                <p>
+                    I love UX because I'm genuinely fascinated
+                    by how people think, what catches their
+                    attention and why some experiences feel
+                    more natural than others. I enjoy bringing
+                    that perspective into visual communication
+                    and marketing.
+                </p>
+
+                <p>
+                    I'm happiest when I can be creative, learn
+                    something new and exchange ideas with other
+                    people. I enjoy helping others and would
+                    love to be a colleague you can count on.
+                </p>
+
+                <p>
+                    Originally from Slovakia, I'm building my
+                    future in Denmark. I speak fluent English
+                    and am actively learning Danish. I'm excited
+                    to continue growing here, both personally
+                    and professionally.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section contribution" id="contribution">
+        <div class="container">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">What I bring</p>
+                <h2>How I could contribute to your team.</h2>
+                <p>
+                    Creative ideas, practical skills and a
+                    genuine willingness to help.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill reveal">
+                    <svg viewBox="0 0 48 48" fill="none"
+                         stroke="currentColor" stroke-width="1.7"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M9 37l4-12L34 4l10 10-21 21z"/>
+                        <path d="M29 9l10 10M13 25l10 10M9 37l11-3"/>
+                        <path d="M7 43h35"/>
+                    </svg>
+                    <h3>Creative communication</h3>
+                    <p>
+                        Creating thoughtful visuals, social
+                        media content, campaign materials and
+                        presentations that are easy to understand.
+                    </p>
+                </article>
+
+                <article class="skill reveal">
+                    <svg viewBox="0 0 48 48" fill="none"
+                         stroke="currentColor" stroke-width="1.7"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <rect x="4" y="6" width="40" height="28" rx="3"/>
+                        <path d="M17 42h14M24 34v8"/>
+                        <path d="M17 15l-5 5 5 5M31 15l5 5-5 5M26 12l-4 16"/>
+                    </svg>
+                    <h3>Digital understanding</h3>
+                    <p>
+                        Supporting website and content updates,
+                        improving digital experiences and
+                        exploring useful applications of AI.
+                    </p>
+                </article>
+
+                <article class="skill reveal">
+                    <svg viewBox="0 0 48 48" fill="none"
+                         stroke="currentColor" stroke-width="1.7"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <circle cx="24" cy="12" r="6"/>
+                        <circle cx="9" cy="19" r="4"/>
+                        <circle cx="39" cy="19" r="4"/>
+                        <path d="M13 41v-7a11 11 0 0 1 22 0v7M2 38v-6a7 7 0 0 1 10-6M46 38v-6a7 7 0 0 0-10-6"/>
+                    </svg>
+                    <h3>A supportive colleague</h3>
+                    <p>
+                        Sharing ideas, helping with event
+                        preparations and supporting colleagues
+                        with everyday marketing tasks.
+                    </p>
+                </article>
+
+                <article class="skill reveal">
+                    <svg viewBox="0 0 48 48" fill="none"
+                         stroke="currentColor" stroke-width="1.7"
+                         stroke-linecap="round" stroke-linejoin="round"
+                         aria-hidden="true">
+                        <rect x="9" y="8" width="30" height="35" rx="3"/>
+                        <rect x="17" y="4" width="14" height="8" rx="2" fill="white"/>
+                        <path d="M16 22l3 3 5-6M27 22h6M16 33l3 3 5-6M27 33h6"/>
+                    </svg>
+                    <h3>Curiosity and initiative</h3>
+                    <p>
+                        Learning quickly and taking an active
+                        role in campaign coordination, organizing
+                        information and supporting marketing reports.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="experience reveal">
+                <div>
+                    <h3>From education to practical experience.</h3>
+                    <p>
+                        My previous experience with marketing
+                        materials, presentations, social media
+                        and digital design has given me a foundation
+                        I would love to build on with your team.
+                    </p>
+                </div>
+                <a class="button outline" href="https://gabrielalukacova.github.io/designer-portfolio/"
+                   target="_blank" rel="noopener">
+                    Explore my portfolio ↗
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="closing" id="contact">
+        <div class="container narrow reveal">
+
+            <h2>Let's get to know each other.</h2>
+
+            <p>
+                I would be genuinely happy to bring my energy,
+                ideas and willingness to learn to your marketing
+                team. Thank you for taking the time to get to
+                know me.
             </p>
 
             <p>
-                I hope we get the chance to meet and talk
-                about what we could create together.
+                I hope we get the opportunity to meet!
             </p>
 
             <p class="signature">
@@ -368,14 +307,13 @@
                 <strong>Gabriela Lukacova</strong>
             </p>
 
-            <div class="actions closing-actions">
-                <a class="button button-light"
-                   href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf"
+            <div class="actions">
+                <a href="https://gabrielalukacova.github.io/designer-portfolio/assets/CV_Gabriela_Lukacova.pdf" class="button light"
                    target="_blank" rel="noopener">
-                    Open my CV ↗
+                    View my CV ↗
                 </a>
-                <a class="light-link"
-                   href="https://gabrielalukacova.github.io/designer-portfolio/"
+
+                <a href="https://gabrielalukacova.github.io/designer-portfolio/" class="closing-link"
                    target="_blank" rel="noopener">
                     My portfolio ↗
                 </a>
@@ -392,8 +330,8 @@
 
 <footer>
     <div class="container footer-content">
-        <span>Created with care by Gabriela Lukacova.</span>
-        <span>A personal application for Vestjylland Forsikring.</span>
+        <span>Gabriela Lukacova</span>
+        <span>Personal application for Vestjylland Forsikring</span>
         <a href="#home">Back to top ↑</a>
     </div>
 </footer>

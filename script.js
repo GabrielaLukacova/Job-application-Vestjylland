@@ -1,74 +1,88 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const menu = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("#navigation");
+
+    function closeMenu() {
+        nav.classList.remove("open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-label", "Open navigation");
+    }
+
+    menu.addEventListener("click", () => {
+        const open = nav.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(open));
+        menu.setAttribute(
+            "aria-label",
+            open ? "Close navigation" : "Open navigation"
+        );
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && nav.classList.contains("open")) {
+            closeMenu();
+            menu.focus();
+        }
+    });
+
+    document.addEventListener("click", event => {
+        if (!event.target.closest(".navigation")) {
+            closeMenu();
+        }
+    });
+
     const reducedMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
     ).matches;
 
     if ("IntersectionObserver" in window && !reducedMotion) {
-        const elements = document.querySelectorAll(
-            ".section-heading, .prose, .about-statement, " +
-            ".contribution-item, .values-grid > div, .center-heading"
-        );
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove("pending");
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05 });
 
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove("pending");
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.08 }
-        );
-
-        elements.forEach(element => {
-            element.classList.add("reveal");
-
+        document.querySelectorAll(".reveal").forEach(element => {
             if (element.getBoundingClientRect().top > window.innerHeight) {
                 element.classList.add("pending");
-                revealObserver.observe(element);
+                observer.observe(element);
             }
-        });
-
-        window.addEventListener("beforeprint", () => {
-            elements.forEach(element => {
-                element.classList.remove("pending");
-            });
         });
     }
 
-    const navigationLinks = document.querySelectorAll("nav a");
-
     if ("IntersectionObserver" in window) {
-        const navObserver = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
+        const links = nav.querySelectorAll("a");
 
-                    navigationLinks.forEach(link => {
-                        const active =
-                            link.getAttribute("href") ===
-                            "#" + entry.target.id;
+        const sectionObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
 
-                        link.classList.toggle("active", active);
+                links.forEach(link => {
+                    const active =
+                        link.getAttribute("href") === "#" + entry.target.id;
 
-                        if (active) {
-                            link.setAttribute("aria-current", "location");
-                        } else {
-                            link.removeAttribute("aria-current");
-                        }
-                    });
+                    link.classList.toggle("active", active);
+
+                    if (active) {
+                        link.setAttribute("aria-current", "location");
+                    } else {
+                        link.removeAttribute("aria-current");
+                    }
                 });
-            },
-            {
-                rootMargin: "-20% 0px -55% 0px",
-                threshold: 0
-            }
-        );
+            });
+        }, {
+            rootMargin: "-15% 0px -55% 0px"
+        });
 
         document.querySelectorAll(
             "#home, #motivation, #about, #contribution, #contact"
-        ).forEach(section => navObserver.observe(section));
+        ).forEach(section => sectionObserver.observe(section));
     }
 });
